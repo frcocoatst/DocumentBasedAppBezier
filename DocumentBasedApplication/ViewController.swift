@@ -12,34 +12,47 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var viewOutlet: NSView!
     
-/*    @IBAction func ButtonAction(_ sender: Any) {
-        if (textField?.stringValue) != nil {
-            print("\(textField.stringValue)")  // unwrapped
-        }
-        else
-        {
-            print("2")
-        }
-    }
- */
-    var contents: String? {
+    var controlPoint_1: NSPoint {
         get {
-            // return textField.stringValue
-            return "Test"
+            return NSPoint(x: 200, y: 200)
+            //return  viewOutlet.aPoint     <-- this is not working
         }
         set {
-            if newValue != nil
-            {
-                //textField.stringValue = newValue!
-                print("\("newValue")")
-            }
-            else
-            {
-                print("nil value")
-            }
+            // here set the new value
+            //viewOutlet.bPoint = newValue  <-- this is not working
+            NSLog("set \(newValue)")
         }
     }
     
+    var controlPoint_2: NSPoint {
+        get {
+            return NSPoint(x: 10, y: 20)
+        }
+        set {
+            // here set the new value
+            NSLog("set \(newValue)")
+        }
+    }
+    
+    var startPoint: NSPoint {
+        get {
+            return NSPoint(x: 30, y: 30)
+        }
+        set {
+            // here set the new value
+            NSLog("set \(newValue)")
+        }
+    }
+    
+    var endPoint: NSPoint {
+        get {
+            return NSPoint(x: 40, y: 40)
+        }
+        set {
+            // here set the new value
+            NSLog("set \(newValue)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,19 @@
 
 import Cocoa
 
+/*
+extension BezierView {
+    var bPoint: NSPoint {
+        get {
+            return controlPoint_1
+        }
+        set {
+            controlPoint_1 = newValue
+        }
+    }
+}
+*/
+
 class BezierView: NSView{
     
     let PADSIZE:CGFloat = 4.0
@@ -19,21 +32,31 @@ class BezierView: NSView{
     var startPoint = NSPoint()
     var endPoint  = NSPoint()
     
+
     var startpoint_selected  = false
     var endpoint_selected  = false
     var controlpoint1_selected  = false
     var controlpoint2_selected  = false
     
-    
     // initialize various points
+    
+    var aPoint: NSPoint {
+        get {
+            return controlPoint_1
+        }
+        set {
+            controlPoint_1 = newValue
+        }
+    }
+
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        self.controlPoint_1 = NSPoint(x: 400, y: 400)
-        self.controlPoint_2 = NSPoint(x: 200, y: 80)
-        self.startPoint = NSPoint(x: 100, y: 100)
-        self.endPoint = NSPoint(x: 500, y: 200)
+        controlPoint_1 = NSPoint(x: 400, y: 400)
+        controlPoint_2 = NSPoint(x: 200, y: 80)
+        startPoint = NSPoint(x: 100, y: 100)
+        endPoint = NSPoint(x: 500, y: 200)
     }
     
     // drawRect
