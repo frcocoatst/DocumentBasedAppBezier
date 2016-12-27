@@ -10,50 +10,45 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var viewOutlet: NSView!
+    @IBOutlet weak var viewOutlet: BezierView!
+    
     
     var controlPoint_1: NSPoint {
         get {
-            return NSPoint(x: 200, y: 200)
-            //return  viewOutlet.aPoint     <-- this is not working
+            return viewOutlet.p1
         }
         set {
-            // here set the new value
-            //viewOutlet.bPoint = newValue  <-- this is not working
-            NSLog("set \(newValue)")
+            viewOutlet.p1 = newValue
         }
     }
     
     var controlPoint_2: NSPoint {
         get {
-            return NSPoint(x: 10, y: 20)
+            return viewOutlet.p2
         }
         set {
-            // here set the new value
-            NSLog("set \(newValue)")
+            viewOutlet.p2 = newValue
         }
     }
     
     var startPoint: NSPoint {
         get {
-            return NSPoint(x: 30, y: 30)
+            return viewOutlet.p3
         }
         set {
-            // here set the new value
-            NSLog("set \(newValue)")
+            viewOutlet.p3 = newValue
         }
     }
     
     var endPoint: NSPoint {
         get {
-            return NSPoint(x: 40, y: 40)
+            return viewOutlet.p4
         }
         set {
-            // here set the new value
-            NSLog("set \(newValue)")
+            viewOutlet.p4 = newValue
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
