@@ -11,8 +11,6 @@
 			<array>
 				<string>mydoc</string>
 			</array>
-			<key>CFBundleTypeIconFile</key>
-			<string></string>
 			<key>CFBundleTypeName</key>
 			<string>DocumentType</string>
 			<key>CFBundleTypeOSTypes</key>
